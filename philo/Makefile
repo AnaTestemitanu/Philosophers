@@ -1,22 +1,22 @@
-NAME    = philo
-CC      = gcc
+NAME	= philo
+CC	  = gcc
 CFLAGS  = -Werror -Wall -Wextra -pthread
 
 SRC_PATH = srcs/
 OBJ_PATH = objects/
 
-SRC     = main.c \
-          input_validation.c \
-          grim_reaper.c \
-          time_management.c \
-          philosopher_routines.c \
-          table_initialization.c \
-          output.c \
-          cleanup.c
-SRCS    = $(addprefix $(SRC_PATH), $(SRC))
-OBJS    = $(patsubst $(SRC_PATH)%.c, $(OBJ_PATH)%.o, $(SRCS))
+SRC	 = main.c \
+	input_validation.c \
+	grim_reaper.c \
+	time_management.c \
+	philosopher_routines.c \
+	table_initialization.c \
+	output.c \
+	cleanup.c
+SRCS	= $(addprefix $(SRC_PATH), $(SRC))
+OBJS	= $(patsubst $(SRC_PATH)%.c, $(OBJ_PATH)%.o, $(SRCS))
 
-INC     = -I includes/
+INC	 = -I includes/
 
 all: $(NAME)
 
